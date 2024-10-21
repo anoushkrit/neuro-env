@@ -5,6 +5,8 @@ ENV=tractolearn
 PROGRAM_PATH=\neuro\programs
 conda create -n $ENV python=3.10 && source ~/.bashrc
 conda activate ${ENV}
+conda install -c mrtrix3 mrtrix3
+conda update -c mrtrix3 mrtrix3
 pip install --upgrade setuptools wheel
 pip install numpy
 git clone https://github.com/getspams/spams-python && cd spams-python && pip install -e .
