@@ -3,7 +3,7 @@ sudo apt-get install git g++ python libeigen3-dev zlib1g-dev libqt5opengl5-dev l
 sudo apt-get install python3-distutils build-essential
 sudo apt install libfreetype6-dev
 ENV=tractolearn
-PROGRAM_PATH=\neuro\programs
+PROGRAM_PATH=/neuro/programs
 conda create -n $ENV python=3.10 && source ~/.bashrc
 conda activate ${ENV}
 #mrtrix
@@ -20,5 +20,15 @@ export SETUPTOOLS_USE_DISTUTILS=stdlib
 cd scilpy/ && pip install -e .
 # dmriQCpy
 pip install git+https://github.com/scilus/dmriqcpy.git
+# ants
+cd $PROGRAM_PATH
+wget https://github.com/ANTsX/ANTs/releases/download/v2.5.3/ants-2.5.3-ubuntu-20.04-X64-gcc.zip
+unzip ants-2.5.3-ubuntu-20.04-X64-gcc.zip
+export PATH=$PROGRAM_PATH/ants-2.5.3/bin:$PATH && source ~/.bashrc
+
+
+
+
+
 
 
