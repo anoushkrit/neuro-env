@@ -1,3 +1,4 @@
+# https://github.com/scilus/containers-scilus?tab=readme-ov-file
 sudo apt install libblas-dev liblapack-dev gfortran
 sudo apt-get install git g++ python libeigen3-dev zlib1g-dev libqt5opengl5-dev libqt5svg5-dev libgl1-mesa-dev libfftw3-dev libtiff5-dev libpng-dev
 sudo apt-get install python3-distutils build-essential
@@ -24,8 +25,24 @@ pip install git+https://github.com/scilus/dmriqcpy.git
 cd $PROGRAM_PATH
 wget https://github.com/ANTsX/ANTs/releases/download/v2.5.3/ants-2.5.3-ubuntu-20.04-X64-gcc.zip
 unzip ants-2.5.3-ubuntu-20.04-X64-gcc.zip
-export PATH=$PROGRAM_PATH/ants-2.5.3/bin:$PATH && source ~/.bashrc
+export PATH=$PROGRAM_PATH/ants-2.5.3/bin:$PATH && source ~/.bashrc 
+conda activate $ENV
 # echo 'export PATH=$PROGRAM_PATH/ants-2.5.3/bin:$PATH' >> ~/.bashrc
+#VTK
+wget https://www.vtk.org/files/release/9.3/VTK-9.3.1.tar.gz
+tar xf VTK-9.3.1.tar.gz
+# MESA
+# https://github.com/mesonbuild/meson
+cd $PROGRAM_PATH
+sudo apt install ninja-build
+python3 -m pip install meson
+sudo apt install meson
+wget https://archive.mesa3d.org/mesa-24.2.5.tar.xz
+tar xf mesa-24.2.5.tar.xz
+cd mesa-24.2.5.tar.xz
+source ~/.bashrc && conda activate $ENV
+meson setup builddir/
+
 
 
 
