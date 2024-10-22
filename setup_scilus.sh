@@ -25,6 +25,7 @@ cd $PROGRAM_PATH
 wget https://github.com/ANTsX/ANTs/releases/download/v2.5.3/ants-2.5.3-ubuntu-20.04-X64-gcc.zip
 unzip ants-2.5.3-ubuntu-20.04-X64-gcc.zip
 export PATH=$PROGRAM_PATH/ants-2.5.3/bin:$PATH && source ~/.bashrc
+# echo 'export PATH=$PROGRAM_PATH/ants-2.5.3/bin:$PATH' >> ~/.bashrc
 
 
 
