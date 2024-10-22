@@ -35,13 +35,17 @@ tar xf VTK-9.3.1.tar.gz
 # https://github.com/mesonbuild/meson
 cd $PROGRAM_PATH
 sudo apt install ninja-build
-python3 -m pip install meson
-sudo apt install meson
-wget https://archive.mesa3d.org/mesa-24.2.5.tar.xz
-tar xf mesa-24.2.5.tar.xz
-cd mesa-24.2.5.tar.xz
-source ~/.bashrc && conda activate $ENV
-meson setup builddir/
+# python3 -m pip install meson==1.1.0
+pip install meson==1.1.0
+# sudo apt install meson
+# wget https://archive.mesa3d.org/mesa-24.2.5.tar.xz
+# tar xf mesa-24.2.5.tar.xz
+# cd mesa-24.2.5.tar.xz
+# source ~/.bashrc && conda activate $ENV
+# meson setup builddir/
+
+# VTK is installed already 
+pip install torch==1.13.0+cu117 torchvision==0.14.0+cu117 torchaudio==0.13.0 --extra-index-url https://download.pytorch.org/whl/cu117
 
 
 
