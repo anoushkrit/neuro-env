@@ -1,7 +1,7 @@
 # https://github.com/scilus/containers-scilus?tab=readme-ov-file
 sudo apt install libblas-dev liblapack-dev gfortran
 sudo apt-get install git g++ python libeigen3-dev zlib1g-dev libqt5opengl5-dev libqt5svg5-dev libgl1-mesa-dev libfftw3-dev libtiff5-dev libpng-dev
-sudo apt-get install python3-distutils build-essential
+sudo apt-get install python3-distutils build-essential jq
 sudo apt install libfreetype6-dev
 ENV=tractolearn
 PROGRAM_PATH=/neuro/programs
